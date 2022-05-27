@@ -110,14 +110,9 @@ public class MovieUI {
         Pattern p = Pattern.compile("\\w+,\\s\\w+");
         Matcher m = p.matcher(actor);
         boolean valid = m.matches();
-//        boolean condition = actors.isEmpty();
         if (valid) {
             this.actors.add(actor);
         }
-//        else if (actors.isEmpty()) {
-//            System.out.println("Must enter at least one actor");
-//            valid = false;
-//        }
         else {
             System.out.println("Actor must be in format Last Name, First Name and cannot be blank");
         }
