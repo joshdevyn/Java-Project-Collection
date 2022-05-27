@@ -5,7 +5,7 @@
  *
  */
 
-package pkg2048;
+package TwentyFortyEight;
 
 import java.awt.Font;
 import java.awt.Graphics;
