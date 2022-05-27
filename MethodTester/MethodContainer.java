@@ -5,6 +5,8 @@
    * from MethodTester.  
    * 
    */
+package MethodTester;
+
 public class MethodContainer
 {
 	/**Method: add

@@ -1,12 +1,14 @@
-import java.util.Scanner;
-
-
 /**Class: MethodTester.java
    * @author Joshua Sims
    * @version 1.0
    * This class provides the driver for testing the MethodContainer class.
    * 
    */
+
+package MethodTester;
+
+import java.util.Scanner;
+
 public class MethodTester
 {
 	public static void main(String[] args)
