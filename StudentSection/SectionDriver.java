@@ -5,6 +5,7 @@
  * This class will capture information about the section and student for each student in the students<> Array in the Section() class then print it.
  */
 
+package StudentSection;
 
 import java.util.Scanner;
 

@@ -5,6 +5,8 @@
  * This class will capture information about the section for each student in the students<> Array
  */
 
+package StudentSection;
+
 import java.util.ArrayList;
 
 public class Section {

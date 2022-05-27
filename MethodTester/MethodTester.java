@@ -1,4 +1,4 @@
-/**Class: MethodTester.java
+/**Class: MethodTester
    * @author Joshua Sims
    * @version 1.0
    * This class provides the driver for testing the MethodContainer class.

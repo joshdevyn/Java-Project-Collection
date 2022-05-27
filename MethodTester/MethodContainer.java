@@ -1,4 +1,4 @@
-/**Class: MethodContainer.java
+/**Class: MethodContainer
    * @author Joshua Sims
    * @version 1.0
    * This class will be called by Method Tester and its methods will solve the problems 
