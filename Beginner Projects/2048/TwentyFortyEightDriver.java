@@ -5,7 +5,7 @@
  *
  */
 
-package pkg2048;
+package TwentyFortyEight;
 
 import java.util.Random;
 import java.awt.Graphics;
