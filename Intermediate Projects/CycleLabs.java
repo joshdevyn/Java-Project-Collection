@@ -15,7 +15,7 @@ public class CycleLabs {
         ));
         add(new Example(
                 Arrays.asList("Cycle","Labs","is","the","greatest","company","on","Earth","and","also","objectively","better","than","all","companies","on","Mars"),
-                12
+                20
         ));
     }};
 
@@ -130,16 +130,26 @@ public class CycleLabs {
                     spaceCount = justifiedWords.length();
 
                     // Space buffer for second to last line to be printed
-                    int i = 0;
                     if (spaceCount != 0) {
-                        while (i < (maxLength - spaceCount)) {
-                            spaceBuffer += " ";
+                        int i = 1;
+                        String space = " ";
+                        while (justifiedWords.length() < (maxLength)) {
+                            for (int j = 0; j < justifiedWords.length(); j++) {
+                                if (justifiedWords.substring(j, Math.min(justifiedWords.length(), j + i)).equals(space)) {
+                                    justifiedWords = justifiedWords.substring(0, j + 1) + "\s" + justifiedWords.substring(j+1, justifiedWords.length());
+                                    j++;
+                                }
+                                if (justifiedWords.length() == maxLength) {
+                                    break;
+                                }
+                            }
+                            space += "\s";
                             i++;
                         }
                     }
 
                     // Joins the space buffer with the second to last line on each word in the words buffer list
-                    System.out.println(String.join(spaceBuffer,wordsBuffered));
+                    System.out.println(justifiedWords);
 
                     // Reverts the words to be justified to be the current truncated words buffer string (not array)
                     justifiedWords = wordsBuffer.trim();
@@ -151,16 +161,26 @@ public class CycleLabs {
                     String[] finalBuffer = wordsBuffer.split(" ");
 
                     // Counts spaces needed to justify the last line
-                    i = 0;
                     if (spaceCount != 0 && finalBuffer.length > 1) {
-                        while (i < (maxLength - spaceCount)) {
-                            spaceBuffer += " ";
+                        int i = 1;
+                        String space = " ";
+                        while (justifiedWords.length() < (maxLength)) {
+                            for (int j = 0; j < justifiedWords.length(); j++) {
+                                if (justifiedWords.substring(j, Math.min(justifiedWords.length(), j + i)).equals(space)) {
+                                    justifiedWords = justifiedWords.substring(0, j + 1) + "\s" + justifiedWords.substring(j+1, justifiedWords.length());
+                                    j++;
+                                }
+                                if (justifiedWords.length() == maxLength) {
+                                    break;
+                                }
+                            }
+                            space += "\s";
                             i++;
                         }
                     }
 
                     // Prints the space buffered string
-                    System.out.println(String.join(spaceBuffer,finalBuffer));
+                    System.out.println(justifiedWords);
 
                     // Breaks loop on final word so it isn't printed twice
                     break;
@@ -171,16 +191,26 @@ public class CycleLabs {
                     spaceCount = justifiedWords.length();
 
                     // Counts the number of spaces needed to justify the text
-                    int i = 0;
                     if (spaceCount != 0 && wordsBuffered.size() > 1) {
-                        while (i < (maxLength - spaceCount)) {
-                            spaceBuffer += " ";
+                        int i = 1;
+                        String space = " ";
+                        while (justifiedWords.length() < (maxLength)) {
+                            for (int j = 0; j < justifiedWords.length(); j++) {
+                                if (justifiedWords.substring(j, Math.min(justifiedWords.length(), Math.min(justifiedWords.length(), j + i))).equals(space)) {
+                                    justifiedWords = justifiedWords.substring(0, j + 1) + "\s" + justifiedWords.substring(j+1, justifiedWords.length());
+                                    j++;
+                                }
+                                if (justifiedWords.length() == maxLength) {
+                                    break;
+                                }
+                            }
+                            space += "\s";
                             i++;
                         }
                     }
 
                     // Prints array joined by spaceBuffer
-                    System.out.println(String.join(spaceBuffer,wordsBuffered));
+                    System.out.println(justifiedWords);
 
                     // Reverts wordBuffer and spaceBuffer back to original values and adds the current word to the wordBuffer
                     wordBuffer = word + " ";
@@ -197,10 +227,20 @@ public class CycleLabs {
                     spaceCount = justifiedWords.length();
 
                     // Counts the number of spaces needed to justify the text
-                    int i = 0;
                     if (spaceCount != 0 && wordsBuffered.size() > 1) {
-                        while (i < (maxLength - spaceCount)) {
-                            spaceBuffer += " ";
+                        int i = 1;
+                        String space = " ";
+                        while (justifiedWords.length() < (maxLength)) {
+                            for (int j = 0; j < justifiedWords.length(); j++) {
+                                if (justifiedWords.substring(j, Math.min(justifiedWords.length(), j + i)).equals(space)) {
+                                    justifiedWords = justifiedWords.substring(0, j + 1) + "\s" + justifiedWords.substring(j+1, justifiedWords.length());
+                                    j++;
+                                }
+                                if (justifiedWords.length() == maxLength) {
+                                    break;
+                                }
+                            }
+                            space += "\s";
                             i++;
                         }
                     }
