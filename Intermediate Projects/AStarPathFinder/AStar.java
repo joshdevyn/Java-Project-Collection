@@ -35,6 +35,7 @@ public class AStar extends JComponent implements MouseMotionListener, MouseListe
         button.setActionCommand(text);
         return button;
     }
+    
     boolean setEnd = false;
     boolean setStart = false;
 
@@ -61,6 +62,7 @@ public class AStar extends JComponent implements MouseMotionListener, MouseListe
             i += 15;
             graph.drawString("", 0, i);
         }
+        
         for (int row = Graph.current.YMin; row <= Graph.current.YMax; row++) {
             for (int column = Graph.current.XMin; column <= Graph.current.XMax; column++) {
                 int columnValue = boardSize * (row - Graph.current.YMin) + 80;
@@ -76,16 +78,15 @@ public class AStar extends JComponent implements MouseMotionListener, MouseListe
             graph.fillRect(rowSize, columnSize, boardSize, boardSize);
         }
         graph.setColor(Color.BLUE);
+        
         for (AStarNode line : Graph.current.blocked) {
 
             int rowSize = boardSize * (((Point) line).x - Graph.current.XMin) + 80;
             int columnSize = boardSize * (((Point) line).y - Graph.current.YMin) + 80;
             graph.fillRect(rowSize, columnSize, boardSize, boardSize);
         }
-
-
-
     }
+    
     static AStar mainGame = new AStar();
 
     public static void setup() {
@@ -96,7 +97,6 @@ public class AStar extends JComponent implements MouseMotionListener, MouseListe
         (frame).setContentPane(mainGame);
         frame.setLayout(new FlowLayout());
         frame.setSize(1000, 700);
-        //frame.setUndecorated(true);
         frame.setExtendedState(Frame.MAXIMIZED_BOTH);
         frame.setVisible(true);
         frame.addWindowListener(new WindowAdapter() {
@@ -189,7 +189,7 @@ public class AStar extends JComponent implements MouseMotionListener, MouseListe
         int x = arg0.getX();
         int y = arg0.getY();
         x -= 60;
-        y -=60;
+        y -= 60;
         x /= boardSize;
         y /= boardSize;
         x += Graph.current.XMin;
